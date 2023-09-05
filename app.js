@@ -19,8 +19,8 @@ function clickHandler() {
   fetch(translationUrl(inputText))
     .then((response) => response.json())
     .then((json) => {
-      var translatedText = json.contents.translated;
-      btnOutput.innerText = translatedText;
+      var converted = json.contents.translated;
+      btnOutput.innerText = converted;
     })
     .catch(errorHandler);
 }
